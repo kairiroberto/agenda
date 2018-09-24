@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,26 +31,18 @@ public class AgendarDatasActivity extends AppCompatActivity implements AdapterVi
         int year = 0;
         int month = 0;
         int dayOfMonth = 0;
-        if  (intent.getExtras() != null) {
+        if (intent.getExtras() != null) {
             year = (int) intent.getExtras().get("year");
             month = (int) intent.getExtras().get("month");
             dayOfMonth = (int) intent.getExtras().get("dayOfMonth");
         }
-        horarioList.clear();
-        for (int i = 8; i <= 20; i++) {
-            Horario horario = new Horario(year, month, dayOfMonth, i, 0, "SIM");
+        for (int i = 8; i <= 12; i++) {
             if (AgendaDAO.horarioListReservado.size() > 0) {
-                for (Agenda a : AgendaDAO.horarioListReservado) {
-                    if (a.getHorario().equals(horario)) {
-                        horarioList.add(horario);
-                    } else {
-                        horario.setReservado("NÃO");
-                        horarioList.add(horario);
-                    }
+                if (!AgendaDAO.isAgendaHorario(new Horario(year, month, dayOfMonth, i, 0, "SIM"))) {
+                    horarioList.add(new Horario(year, month, dayOfMonth, i, 0, "NÃO"));
                 }
             } else {
-                horario.setReservado("NÃO");
-                horarioList.add(horario);
+                horarioList.add(new Horario(year, month, dayOfMonth, i, 0, "NÃO"));
             }
         }
         lvAgendarDatas = (ListView) findViewById(R.id.lvAgendarDatas);
