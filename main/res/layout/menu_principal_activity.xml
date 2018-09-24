@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context="salao.myapplocation.jose.myappsalao.MenuPrincipalActivity">
+
+    <Button
+        android:id="@+id/bAgendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AGENDAR" />
+
+    <Button
+        android:id="@+id/bRemarcar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REMARCAR" />
+
+    <Button
+        android:id="@+id/bMAgenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MINHA AGENDA" />
+
+    <Button
+        android:id="@+id/bMPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MEU PERFIL" />
+</LinearLayout>

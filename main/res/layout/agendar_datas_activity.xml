@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright"
+    android:orientation="vertical"
+    tools:context="salao.myapplocation.jose.myappsalao.AgendarDatasActivity">
+
+    <ListView
+        android:id="@+id/lvAgendarDatas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@android:color/background_light"
+        android:padding="5dp"
+        android:saveEnabled="true"
+        tools:listfooter="?attr/colorButtonNormal"
+        tools:listheader="?attr/colorButtonNormal" />
+</LinearLayout>
